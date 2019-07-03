@@ -1,0 +1,6 @@
+.studio/*
+.mule/*
+.settings/*
+bin/*
+target/*
+src/main/app/my.secret.properties
