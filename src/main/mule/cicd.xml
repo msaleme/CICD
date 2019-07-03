@@ -19,7 +19,15 @@ output application/json
 payload]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="515ca600-0378-4378-8670-b5780966f9ac" />
+		<set-payload value="#[now()]" doc:name="Set Payload" doc:id="515ca600-0378-4378-8670-b5780966f9ac" />
+		<ee:transform doc:name="Transform Message" doc:id="e2f4ea6a-75b2-4628-9d1d-c752a8531afd" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
 		<logger level="INFO" doc:name="Logger" doc:id="dd1a1a4b-d47f-4d2a-865f-189728dc1544" message="#[payload]"/>
 	</flow>
 </mule>
