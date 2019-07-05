@@ -8,6 +8,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="a5f2b565-e062-43b1-b2b3-a102a3064cb3" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="83528f45-ba1b-4399-a7d1-36273d72212d" file="config.yaml" />
 	<flow name="cicdFlow" doc:id="74428d4f-73e1-432f-a3eb-24d77cbe9d78" >
 		<http:listener doc:name="Listener" doc:id="25d7bdc9-9d90-48b0-9088-d6afdb54cd6b" config-ref="HTTP_Listener_config" path="/hello"/>
 		<set-payload value="hello world!" doc:name="Set Payload" doc:id="dfd6ec1b-7623-46c0-acc0-d48ea9e8719e" />
